@@ -1,0 +1,610 @@
+html{
+    width: 100%;
+    font-family:  "Roboto", sans-serif, serif , Palatino, sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+    min-height: 710px;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(245, 230, 230);
+	display: block;
+
+}
+button:hover{
+    background-color: #9e7275;
+}
+
+input:hover , textarea:hover{
+    border: 2px solid rgb(170, 170, 228);
+}
+
+.allbody{
+    position: relative;
+    margin: 0;
+    min-height: 100vh;
+}
+
+footer{	
+    
+    margin-bottom: -5em;
+	clear: both;
+    background-color: rgb(44, 39, 39);
+	width: 100%;
+    min-height: 100px;
+    margin: 0;
+    text-align: center;
+    border-top: 2px solid rgb(216, 123, 123);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.9px;
+    padding-bottom: -10;
+    display: inline-block;
+}
+
+footer p,footer a{
+    margin-left: auto; 
+	margin-right: auto; 
+	font-size: 12px;
+	margin-top: 30px;
+	color: #e3e3e3;
+}
+#first-footerbox{
+	clear: both;
+	height: 300px;	
+	position: relative;
+	background: url('../img/delicious-buffet-foodss.png') no-repeat;
+	background-size: 100%;
+	margin-top: 100px;
+}
+
+
+#first-footer-cover{	
+	height: 100%;
+	background:#4b525b;
+	margin-top: 0;
+	padding: 0;
+	background: rgb(106, 90, 205);
+	opacity: 0.5;
+	position: absolute;
+	width: 100%;
+}
+#first-footer-content{
+	position: absolute;
+	z-index: 1;
+	left: 0; 
+    right: 0; 
+	margin-left: auto; 
+	margin-right: auto; 
+    width: 100%;
+    margin-top: 40px;
+}
+#first-footer-content h2{
+    text-align: center;
+    margin-left: auto; 
+    margin-right: auto; 
+    font-family: cursive, "Roboto", monospace;
+}
+
+.main-body{ 
+    width: 100%;
+    display: block;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+    min-height: 77vh;
+}
+.main-body-rel{
+    position: relative;
+}
+.main-image-sec{
+    position: relative;
+}
+
+#backimage{
+    width: 100%;
+    height: auto;
+}
+
+#descriptionbox{
+    width: 100%;
+}
+
+.brand-menu{
+    width: 80%;
+    margin: auto;
+    display: flow-root;
+}
+
+#firstfooterbox{
+    clear: both;
+    position: static;
+    width: 100%;
+    background: red;
+}
+
+.brand-image img{
+    margin: 3%;
+    max-width:100%;
+    max-height:100%;
+    border-radius: 8px;
+}
+
+
+/* content idea from getbootstrap.com*/
+
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+.container-fluid{
+    width: 100%;
+}
+
+.row {
+    float: left;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+.centerdiv{
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+
+.brand-show{
+    margin: auto;
+    overflow: hidden;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    clear: both;  
+}
+.brand-word h1{
+    font-size: 50px;
+}
+
+.brand-activities {
+    display:block;
+    overflow: hidden;
+    margin-top: 90px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;   
+}
+.brand-act-cov{
+    margin: 4%;
+    margin-top: 60px;
+    
+}
+.brand-act-cov p{
+    text-align: justify;
+}
+.brand-act-cov h3{
+ text-align: center;
+}
+
+.brand-act-images{
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+   
+   }
+   .brand-act-images img{
+       width: 100%;
+       border-radius: 6px;
+       margin-left: auto;
+       margin-right: auto;
+   }
+.brand-word{
+    margin: 5%;
+}
+
+
+
+.anchor-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    width: 180px;
+    height: 45px;
+    background: rgb(226, 0, 30);
+    padding: 0;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: auto;
+	margin-right: auto;
+    
+}
+.andchor-full-width{
+    width: 100%;
+    border-radius: 0px 0px 3px 3px;
+}
+
+.order-btn{
+    width: 100%;
+    height: 45px;
+    background: #ee6e73;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 0px 0px 6px 6px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+.main-body-container{
+    min-height: 800px;
+}
+
+.order-meals{
+    clear: both;
+    margin-top: 60px;
+    overflow: hidden;
+}
+.order-a-meal{
+    margin-bottom: 40px;
+}
+
+.order-meals img{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 6px;	
+	margin-left: auto;
+	margin-right: auto;
+}
+.order-image img{
+    display: block;
+    width: 100%;
+    height: 210px;
+    margin-top: 20px;
+    border-radius: 6px;	
+	margin-left: auto;
+	margin-right: auto;
+}
+.order-content{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.selected-price{
+    display: flex;
+}
+.unit-price{
+    flex: 1;
+    margin: auto;
+    display: inline-flex;
+    margin-left: 30px;
+}
+.menu-plates{
+    flex: 1;
+    margin: auto;
+    display: inline-flex;
+}
+.unit-price > p{
+    font-size: 20px;
+}
+.decrement-value, .increment-value{
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    text-align:center;
+    background-color: #ee6e73;
+    border: none;
+    outline: none;
+}
+input.quantity-number {
+    text-align: center;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0px;
+    margin-left: 7px;
+    margin-right: 7px;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+.red-order-meals{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 6px;
+    background-color: rgba(202, 212, 212, 0.582);
+}
+.main-im-cov{
+    position: relative;
+}
+
+#front-content-cover{
+    position: absolute;
+	top: 70px;
+	right:0;
+	left: 0;
+	bottom: 0;
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+    width: 90%;
+    height: 400px;
+    z-index: 200;
+}
+#front-content-con{
+    margin-top: 130px;
+    margin-left: 40px;
+	float: left;
+	width: 80%;
+}
+#front-content-con a{
+	margin-left: 0;
+}
+
+ #front-content-con h1{
+    font-family: cursive, "Roboto", monospace;
+    color: rgb(46, 32, 28);
+	line-height: 1.8;
+    font-size: 49px;
+}
+.org-order-body{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+/* index scroll down botton*/
+/*idea gotten from Yannick Bisaillon https://codepen.io/bisaillonyannick/pen/pvZeGg*/ 
+.scroll-down{
+    font-size: 40px;
+}
+
+.arrow {
+    position: absolute;
+    text-align: center;
+    height: 100px;
+    top: 335px;
+    bottom: 0;
+    left: 0; 
+    right: 0;
+    margin: 8% 0;
+    text-decoration: none !important;
+    cursor: pointer;
+    color: rgb(46, 32, 28);
+  }
+  .arrow-down{
+    width: 150px;
+    height: 80px;
+    -ms-transform: rotate(20deg); /* IE 9 */
+    -webkit-transform: rotate(20deg); /* Safari 3-8 */
+    transform: rotate(180deg);
+
+  }
+  .bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+}
+
+.cart-page{
+    margin-bottom: 100px;
+}
+/*content idea from w3schools https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_loader*/
+.loader {
+
+    border: 16px solid #e3e3e3;
+    border-radius: 50%;
+    border-top: 16px solid  rgb(160, 3, 24);;
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+#loaderTop{
+    width: 40px;
+    height: 60px;
+}
+#loaderDiv{
+    display: none;
+    padding-top: 70px;
+    background: rgba(128, 128, 128, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0
+}
+
+.addBodyDiv{
+    min-height: 95vh;
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+	.brand-act-cov{
+		float:none;
+		display: block;
+		width: 100%;
+    }
+    .order-a-meal{
+        float:none;
+        display: block;
+        width: 100%;
+    }
+    
+    #first-footer-content h2{
+        font-family: Tahoma;
+        font-size: 15px;
+    }
+    #front-content-con{
+        float: none;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+    #front-content-con h1{
+        font-size: 21px;
+    }
+    .order-meals{
+
+        margin-top: 30px;
+
+    }
+    .arrow {
+        top: 199px;
+      }
+
+}
+
+@media screen and (max-width: 600px) {
+
+	.brand-act-cov{
+		float:none;
+		display: block;
+		width: 100%;
+    }
+    .order-a-meal{
+        float:none;
+        display: block;
+        width: 100%;
+    }
+
+    #first-footer-content h2{
+        font-family: Tahoma;
+        font-size: 15px;
+    }
+
+    #front-content-con{
+        float: none;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+    #front-content-con h1{
+        font-size: 18px;
+    }
+
+    #front-content-con a {
+		display: none;
+    }
+    .order-meals{
+
+        margin-top: 20px;
+
+    }
+    
+.arrow {
+    display: none;
+  }
+  .no-order, .no-menu, .no-loan-history{
+      font-size: 0.6rem;
+  }
+
+    
+}
+
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+    #front-content-con h1{
+        font-size: 33px;
+    }
+    .arrow {
+        top: 225px;
+      }
+}
+
+

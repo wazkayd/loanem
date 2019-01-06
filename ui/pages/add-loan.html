@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="loan CHEMCOS Loan">
+    <meta name="keywords" content="CHEMCOS Loan, staff can collect loan">
+    <meta name="author" content="Hassan Wasiu">
+    <title> CHEMCOS</title>
+    <script type="text/javascript" src="../js/jwt-decode.min.js"></script>
+    <script type="text/javascript" src="../js/private.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/headers.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/modal.css">
+</head>
+
+<body>
+    <div class="allbody">
+        <header>
+            <div class="nav">
+                <div class="header-container">
+                    <div class="admin-header-bars">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <div id="homecontainer">
+                        <a href="../index.html">
+                            <h1>CHEMCOS</h1>
+                        </a>
+                    </div>
+                    <nav class="nav-list">
+                        <ul class="ul-user">
+                            <li class=" .li-user dropdown">
+                                <a href="javascript:void(0)" class="dropbtn">Admin
+                                    <span style="font-size: 15px;">&#9660;</span>
+                                </a>
+                                <div class="dropdown-content">
+                                    <a href="add-loan.html"> add Loan</a>
+                                    <a href="loans.html">Loans</a>
+                                    <a class="logout-btn" href="javascript:void(0);" onclick="loggoutUser();">Logout</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+        </header>
+        <section id="slide-nav">
+            <a href="add-loan.html"> add Loan</a>
+            <a href="loans.html">Loans</a>
+            <a class="logout-btn" href="javascript:void(0);" onclick="loggoutUser();">Logout</a>
+        </section>
+        <div id="loaderDiv">
+            <div id="loaderTop"></div>
+            <div class="loader"></div>
+        </div>
+        <div class="main-body centerdiv addBodyDiv">
+            <div class="centerdiv create-cont-wrapper">
+                <form onsubmit="return false;">
+                    <h1 class="add-header-text">ADD NEW LOAN</h1>
+                    <div class="input-div">
+                        <div class="error-div centerdiv">
+                            <span id="signUpErrorHandler" class="error-hander"></span>
+                        </div>
+                    </div>
+                    <div class="left-ad">
+                        <div class="input-div">
+                            <span class="add-span">Amount</span>
+                            <span class="is-required add-span">*</span>
+                        </div>
+                        <input class="admin-input user-input-small" id="loanAmount" type="text" placeholder=" Enter Loan Amount" />
+                        <div class="input-div">
+                            <span class="add-span">First Guarantor</span>
+                            <span class="is-required add-span">*</span>
+                        </div>
+                        <input class="admin-input user-input-small" id="firstGuarantor" type="text" ; placeholder=" Enter First Guarantor Name" />
+                        <div class="input-div">
+                            <span class="add-span">Third Guarantor</span>
+                            <span class="is-required add-span">*</span>
+                        </div>
+                        <input class="admin-input user-input-small" id="thirdGuarantor" type="text" placeholder=" Enter Third Guarantor Namee" />
+                    </div>
+                    <div class="right-ad">
+                        <div class="input-div">
+                            <span class="add-span">Payment Duration</span>
+                            <span class="is-required add-span">*</span>
+                        </div>
+                        <select id="durationCategory" class="admin-input-sel">
+                            <option value="0">Select Category:</option>
+                            <option value="1">1 month</option>
+                            <option value="2">2 month</option>
+                            <option value="3">3 month</option>
+                            <option value="4">4 month</option>
+                            <option value="5">5 month</option>
+                            <option value="6">6 month</option>
+                            <option value="7">7 month</option>
+                            <option value="8">8 month</option>
+                            <option value="9">9 month</option>
+                            <option value="10">10 month</option>
+                            <option value="11">11 month</option>
+                            <option value="12">12 month</option>
+                            <option value="13">13 month</option>
+                            <option value="14">14 month</option>
+                            <option value="15">15 month</option>
+                            <option value="16">16 month</option>
+                            <option value="17">17 month</option>
+                            <option value="18">18 month</option>
+                            <option value="19">19 month</option>
+                            <option value="20">20 month</option>
+                            <option value="21">21 month</option>
+                            <option value="22">22 month</option>
+                            <option value="23">23 month</option>
+                            <option value="24">24 month</option>
+                        </select>
+                        <div class="input-div">
+                            <span class="add-span">Second Guarantor</span>
+                            <span class="is-required add-span">*</span>
+                        </div>
+                        <input class="admin-input user-input-small" id="secondGuarantor" type="text" ; placeholder="Enter Second Guarantor Name" />
+                        <div class="input-div">
+                            <span class="add-span">Forth Guarantor</span>
+                            <span class="is-required add-span">*</span>
+                        </div>
+                        <input class="admin-input user-input-small" id="forthGuarantor" type="text" placeholder="Enter Forth Guarantor Name" />
+                    </div>
+                    <div class="create-food-btn-div centerdiv">
+                        <button id="addMenuBtn" class="create-food-btn">Create Menu</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <footer id="mainfooter" class="login-footer">
+            <p>CHEMCOS Loan &copy; 2018
+                <a href="#">Terms & Privacy</a>
+            </p>
+
+        </footer>
+        </div>
+</body>
+<script type="text/javascript" src="../js/default.js"></script>
+<script type="text/javascript" src="../js/Request.js"></script>
+<script type="text/javascript" src="../js/Loans.js"></script>
+
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "loanem",
+  "version": "1.0.0",
+  "description": "A loan Application",
+  "main": "app.js",
+  "scripts": {
+    "start": "babel-node app",
+    "start:dev": "nodemon --exec \"babel-node app\""
+  },
+  "author": "Wasiu Hassan",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.3.0",
+    "morgan": "^1.9.1",
+    "pg": "^7.6.1"
+  }
+}

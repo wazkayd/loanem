@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="loan CHEMCOS Loan">
+    <meta name="keywords" content="CHEMCOS Loan, staff can collect loan">
+    <meta name="author" content="Hassan Wasiu">
+    <title>CHEMCOS</title>
+    <link rel="stylesheet" type="text/css" href="../css/headers.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/modal.css">
+    <script type="text/javascript" src="../js/jwt-decode.min.js"></script>
+    <script type="text/javascript" src="../js/private.js"></script>
+</head>
+
+<body>
+    <div class="allbody">
+        <header>
+            <div class="nav">
+                <div class="header-container">
+                    <div class="admin-header-bars">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <div id="homecontainer">
+                        <a href="../index.html">
+                            <h1>CHEMCOS</h1>
+                        </a>
+                    </div>
+                    <nav class="nav-list">
+                        <ul class="ul-user">
+                            <li class=" .li-user dropdown">
+                                <a href="javascript:void(0)" class="dropbtn">
+                                    <span style="font-size: 15px;">&#9660;</span>
+                                </a>
+                                <div class="dropdown-content">
+                                    <a href="add-loan.html">Add Loan</a>
+                                    <a href="loans.html">Loans</a>
+                                    <a class="logout-btn" href="javascript:void(0);" onclick="loggoutUser();">Logout</a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </nav>
+
+                </div>
+        </header>
+        <section id="slide-nav">
+            <a href="add-loan.html">Add Loan</a>
+            <a href="loans.html">Loans</a>
+            <a class="logout-btn" href="javascript:void(0);" onclick="loggoutUser();">Logout</a>
+        </section>
+        <div class="main-body centerdivh">
+            <div class="all-modal">
+
+            </div>
+            <div class="all-reject-order-modal">
+            </div>
+
+            <div>
+                <h1>Loan History</h1>
+            </div>
+            <div class="select-category-wrapper">
+                <select class="select-category">
+                    <option value="all">All</option>
+                    <option value="new">New</option>
+                    <option value="processing">accepted</option>
+                    <option value="cancelled">cancelled</option>
+                    <option value="complete">conpleted</option>
+                    <option value="committee-accepted">Commitee Accept</option>
+                    <option value="committee-cancelled">Commitee Reject</option>
+                </select>
+            </div>
+            <div class="centerdiv container">
+                <!-- Modal content -->
+
+
+            </div>
+            <div class="centerdiv container order-table-container">
+                <table class="order-table">
+                </table>
+            </div>
+            <div class="no-loan-history"></div>
+        </div>
+        <!--table ends-->
+        <!-- pagination -->
+        <!-- adopted from w3school-->
+        <div class="centerdiv pagination">
+        </div>
+        <!-- pagination ends-->
+        <footer id="mainfooter" class="login-footer">
+            <p>CHEMCOS Loan &copy; 2018
+                <a href="#">Terms & Privacy</a>
+            </p>
+
+        </footer>
+        </div>
+</body>
+<script type="text/javascript" src="../js/default.js"></script>
+<script type="text/javascript" src="../js/Request.js"></script>
+<script type="text/javascript" src="../js/Pagination.js"></script>
+<script type="text/javascript" src="../js/UsersAllLoans.js"></script>
+
+</html>

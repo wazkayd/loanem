@@ -1,0 +1,174 @@
+/*Idea from w3schools*/
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    max-height: 80vh;
+    padding-bottom: 160px;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+    
+}
+
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #e3e3e3;
+    margin: auto;
+    padding: 0;
+    width: 50%;
+    min-height: 350px;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    border-radius: 2px;
+    overflow: auto;
+}
+.modal-content-center{
+    text-align: center;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close, .close-order-modal, .close-reject-order {
+    color: #aaaaaa;
+    margin-right: 20px;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus , 
+.close-order-modal:hover, .close-order-modal:focus, 
+.close-reject-order:hover, .close-reject-order:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {padding: 30px 26px;}
+
+
+.del-order-body{
+    color: #000;
+    background: white;
+    border-radius: 5px;
+}
+
+/* delete modal questions button*/
+.del-ques-btn{
+    background-color: rgb(160, 3, 24);
+    width: 30%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 10px;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.order-modal-btn{
+    background-color: rgb(160, 3, 24);
+    width: 30%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 10px;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.order-modal{
+    text-align: left;
+}
+#myModalDel{
+    display: none;
+}
+
+/* order form */
+.order-input{
+    width: 100%;
+    border-radius: 3px;
+    height: 29px;
+    margin-top: 3px;
+    border: 2px solid #5820203a;
+}
+.order-text-area{
+    width: 100%;
+    border-radius: 3px;
+    border: 2px solid #5820203a;
+}
+
+.order-error-div{
+    display: none;
+    width: 100%;
+    background-color: #b30000;
+    height: 30px;
+    border-radius: 2px;
+}
+.order-error-span{
+    color: white;
+    font-size: 17px;
+    padding-top: 5px;
+    padding-left: 16px;
+    display: inline-block;
+
+}
+.success-btn{
+    background-color: #2ecc71;
+    border: none;
+    border-radius: 4px;
+    color: white;
+}
+.success-btn:hover{
+    background-color: #2ecc71;
+}
+.success-modal-body{
+    display: none;
+    margin-top: 80px;
+}
+.order-loan-item{
+    margin-top: 40px;
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .modal{
+        width: 100%;
+        padding-top: 120px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .modal{
+        width: 100%;
+        padding-top: 80px;
+    }
+    .modal-content{
+        width: 80%;
+    }
+}
+

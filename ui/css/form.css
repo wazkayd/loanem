@@ -1,0 +1,590 @@
+
+    /* sign in page */
+    .all-login-body{
+        margin:0;
+        width: 100%;
+        height: auto;   
+        background-image: url("../img/niels-steeman-262087-unsplash.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 100vh;
+        z-index: -1;
+    }
+
+    .addBodyDiv{
+        min-height: 90vh;
+    }
+
+
+    .login-body-wrapper{
+        position: absolute;
+        top: 190px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+    .login-wrapper{
+        width: 280px;
+        margin: auto;
+        padding: 20px;
+        font-weight: bold;
+        border-radius: 7px;
+        background: rgba(255,255,255,0.3);
+        box-shadow: 0 0 4px #aaa;
+        color: rgb(38, 67, 107);
+    }
+    .signup-body-wrapper{
+        top: 50px;
+    }
+
+
+    .login-form-title{
+        font-size: 20px;
+        text-align: center;
+        margin: 16px 0px;
+        margin-top: 0px;
+        font-weight: bold;
+        font-size: 35px;
+        letter-spacing: 0.7px;
+        color: rgb(160, 3, 24);
+    }
+
+    .user-input{
+        width: 250px;
+        border-radius: 4px;
+        height: 30px;
+        margin-top: 3px;
+        padding-left: 28px;
+    }
+    .input-div {
+        margin-top: 15px;
+    }
+
+    .admin-input{
+        width: 250px;
+        border-radius: 4px;
+        height: 30px;
+        margin-top: 3px;
+        padding-left: 2px;
+    }
+    .admin-input-sel{
+        width: 257px;
+        border-radius: 4px;
+        height: 30px;
+        margin-top: 3px;
+    }
+
+    .signin-btn{
+        width: 280px;
+        height: 40px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+        background: rgb(160, 3, 24);
+        font-size: 20px;
+        color: #e3e3e3;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    .other-link a {
+        font-size: 15px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .search-input{
+        margin-top: 40px;
+        width: 380px;
+        border-radius: 8px;
+        height: 33px;
+        padding-left: 10px;
+        outline: none;
+    }
+    .search-body{
+        text-align: center;
+        margin-left: auto;
+        margin-bottom: auto;
+    }
+
+    /* font awesome */
+    #filterSearch {
+        position: relative;
+        z-index: 1;
+        left: -25px;
+        top: 1px;
+        color: rgb(80, 70, 70);
+        width: 0;
+    }
+
+    .filter-user-input {
+        position: relative;
+        z-index: 1;
+        left: 10px;
+        top: -25px;
+        color: rgba(34, 31, 31, 0.878);
+        width: 0;
+    }
+
+    /* css for tables*/
+
+    .order-table{
+        border-collapse: collapse;
+        margin-top: 30px;
+        font-weight: bold;
+        width: 100%;
+    }
+    .order-table tr {
+        height: 50px;   
+    }
+    .order-table tr:nth-child(odd) {
+        background-color: rgb(231, 206, 206);
+    }
+
+    .order-table th, .order-table tr , .order-table td {
+        text-align: center;
+        padding: 25px;
+    }
+    .centerdivh{
+        text-align: center;
+    }
+    td p{
+        display: inline;
+        padding: 10px;
+    }
+
+    /* admin orders table.... adapted from user order history*/
+    .accept-btn{
+        background: #039be5;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    .reject-btn{
+        background: rgb(226, 0, 30);
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    .complete-btn{
+        background: #039be5;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 2px;
+        padding: 3px;
+    }
+    /* pagination css*/
+    /* idea gotten from w3school https://www.w3schools.com/howto/howto_css_pagination.asp*/
+    .pagination a {
+        color: black;
+        float: left;
+        margin-bottom: 30px;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+        cursor: pointer;
+    }
+
+    .pagination a.active {
+        background-color: #ee6e73;
+        color: white;
+    }
+
+    /* Add a grey background color on mouse-over */
+    .pagination a:hover:not(.active) {
+        background-color: #ddd;
+    }
+
+    /* end of pagination*/
+    .food-btn-div{
+        padding-bottom: 10px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    .ad-ev-btn{
+        color: white;
+        border-radius: 5px;
+        width: 80px;
+        font-weight: bold;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .edit-btn{
+        color: white;
+        background-color: #039be5;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 3px;
+        margin-right: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .delete-btn{
+        background: #ee6e73;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 3px;
+        margin-left: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /*create new food page form*/
+    .create-cont-wrapper{
+        width: 70%;
+        background:rgba(45, 37, 37, 0.81);
+        height: 500px;
+        margin: 50px;
+    }
+    .add-header-text{
+        color: rgb(250, 250, 250);
+        text-align: center;
+    }
+    .left-ad{
+        float: left;
+        margin: 30px;
+        margin-left: 10px;
+        margin-right: 50px;
+        margin-top: 30px;
+    }
+    .right-ad{
+        float: left;
+        margin: 13px;
+        margin-top: 30px;
+    }
+    #uploaded-img-holder{
+        width: inherit;
+        height: inherit;
+    }
+    .images-btns{
+        display: flex;
+    }
+    .upload-wrapper {
+        position: relative;
+        overflow: hidden;
+        margin-top: 20px;
+      }
+    .remove-img-btn{
+        cursor: pointer;
+        outline: none;
+        border: none;
+        color: white;
+        background-color: rgb(226, 0, 30);
+        padding: 8px 15px;
+        border-radius: 8px;
+        font-size: 16px;
+        height: 43px;
+        margin-top: 20px;
+        width: 109px;
+      }
+    .choose-img-btn{
+        cursor: pointer;
+        outline: none;
+        border: 2px solid gray;
+        background-color: white;
+        padding: 8px 15px;
+        border-radius: 8px;
+        font-size: 16px;
+        width: 100px;
+    }
+    .add-span{
+        color: white;
+    }
+    .create-food-btn{
+        width: 170px;
+        height: 40px;
+        font-weight: 600;
+        font-size: 20px;
+        border-radius: 6px;
+        background: rgb(226, 0, 30);
+        color: white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    .create-food-btn-div{
+        clear: both;
+        border: none;
+    }
+
+    .del-meal-btn{
+        border: none;
+        border-radius: 5px;
+        width: 60px;
+        height: 33px;
+        background: #ee6e73;
+        font-weight: 700;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    #placeOrderBtn{
+        width: 120px;
+        height: 40px;
+        background: #ee6e73;
+        outline: none;
+        border-radius: 6px;
+        font-weight: 800;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+
+    .disabled-hover {
+        cursor: not-allowed;
+        background: none;
+      }
+    .disabled-hover:hover{
+        background: rgba(10, 10, 10 ,0)
+    }
+    .completed-checkbox{
+        width:23px;
+        height:23px;
+        cursor: not-allowed;
+    }
+    .is-accepted{
+        cursor: pointer;
+    }
+    .error-hander{
+        color: rgb(226, 0, 30);
+        text-align: center;  
+    }
+
+    /* order-cart page*/
+.order-details-wrapper h1{
+    text-align: center;
+}
+
+.order-details{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 20px;
+}
+
+.food-items{
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+.order-dates div{
+    padding-top: 10px;
+}
+.order-food-title{
+    background-color: rgb(192, 221, 215);   
+}
+.order-food-title div{
+ padding-bottom: 10px;
+}
+
+/*  user order history page */
+
+.user-history-table{
+    border-collapse: collapse;
+    margin-top: 30px;
+    font-weight: bold;
+    width: 900px;
+}
+.user-history-table tr {
+    height: 50px;   
+}
+.user-history-table tr:nth-child(odd) {
+    background-color: rgb(231, 206, 206);
+}
+.user-history-table th, .user-history-table tr , .user-history-table td {
+    text-align: center;
+    padding: 25px 0px 25px 0px;
+}
+.centerdiv .user-history-table .table-content:hover{
+    cursor: pointer;
+    background-color: #72989e;
+}
+.centerdiv .user-history-table .table-title{
+    background: #ee6e73;
+    color: white;
+}
+.centerdiv .order-table .table-title{
+    background: #ee6e73;
+    color: white;
+}
+.view-details{
+    cursor: pointer;
+    background-color: #72989e;
+    padding: 4px;
+}
+
+/* select category */
+.select-category {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #2c3e50;
+    background-image: none;
+  }
+  /* Custom Select */
+  .select-category-wrapper {
+    position: relative;
+    display: block;
+    width: 12em;
+    height: 1.7em;
+    background: #ee6e73;
+    overflow: hidden;
+    border-radius: .25em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .select-category {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0 0 0 .7em;
+    color: #fff;
+    cursor: pointer;
+  }
+  select::-ms-expand {
+    display: none;
+  }
+  /* Arrow */
+  .select-category-wrapper::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 1em;
+    background: #34495e;
+    pointer-events: none;
+  }
+  /* Transition */
+  .select-category-wrapper:hover::after {
+    color: #f39c12;
+  }
+  .select-category-wrapper::after {
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+  }
+  .menu-icons{
+      font-size:  22px;
+      padding-bottom: 5px;
+  }
+
+    @media screen and (min-width: 600px) and (max-width: 900px) {
+
+        .search-input{
+            width: 290px;
+        }
+        .order-table th, .order-table tr , .order-table td {
+            text-align: center;
+            font-size: 11px;
+            padding: 4px;
+        }
+        .left-ad{
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .right-ad{
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .create-cont-wrapper{
+            width: 80%;
+            height: 800px;
+            margin: 50px;
+        }
+        .del-meal-btn{
+            font-size: 12px;
+            width: 40px;
+            height: 23px;
+            font-weight: 700;
+            border: none;
+            outline: none;
+        }
+        .comp-order-input{
+            width: 200px;
+            height: 32px;
+            
+        }
+        .comp-order-text-area{
+            width: 200px;
+            height: 45px;
+        }
+        #compOrdDiv{
+            width: 70%;
+         }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .search-input{
+            width: 220px;
+        }
+        .user-input-small{
+            width: 200px;
+        }
+        .admin-input-sel{
+            width: 207px;
+        }
+        .left-ad{
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        .right-ad{
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .create-cont-wrapper{
+            width: 80%;
+            height: 850px;
+            margin: 50px;
+        }
+        .order-table th, .order-table tr , .order-table td {
+            text-align: center;
+            font-size: 8px;
+            padding: 1px;
+        }
+        .del-meal-btn{
+            font-size: 10px;
+            width: 40px;
+            height: 23px;
+            font-weight: 700;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .comp-order-input{
+            width: 160px;
+            height: 27px;
+            
+        }
+        .comp-order-text-area{
+            width: 160px;
+            height: 42px;
+        }
+        #compOrdDiv{
+            width: 90%;
+         }
+
+    }

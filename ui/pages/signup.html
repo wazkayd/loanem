@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="loan CHEMCOS Loan">
+    <meta name="keywords" content="CHEMCOS Loan, staff can collect loan">
+    <meta name="author" content="Hassan Wasiu">
+    <title> CHEMCOS</title>
+    <script type="text/javascript" src="../js/jwt-decode.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/headers.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <script type="text/javascript" src="../js/alreadyLoginCheck.js"></script>
+</head>
+
+<body>
+    <div class="allbody">
+        <header>
+            <div class="nav">
+                <div class="header-container">
+                    <div class="admin-header-bars">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <div id="homecontainer">
+                        <a href="../index.html">
+                            <h1>CHEMCOS</h1>
+                        </a>
+                    </div>
+                    <nav class="nav-list">
+                        <ul>
+                            <li>
+                                <a href="../index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="login.html">Login</a>
+                            </li>
+                            <li>
+                                <a href="signup.html">Signup</a>
+                            </li>
+
+                        </ul>
+                    </nav>
+
+                </div>
+        </header>
+        <section id="slide-nav">
+            <a href="../index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Signup</a>
+        </section>
+        <div id="loaderDiv">
+            <div id="loaderTop"></div>
+            <div class="loader"></div>
+        </div>
+        <div class="main-body all-login-body">
+            <div class="main-im-cov">
+
+                <div class="login-body-wrapper signup-body-wrapper">
+                    <div class="login-wrapper">
+
+                        <form onsubmit="return false;">
+                            <div class="login-form-title">Sign Up</div>
+                            <div class="input-div">
+                                <span id="signUpErrorHandler" class="error-hander"> </span>
+                            </div>
+                            <div class="input-wrapper">
+                                <div class="input-div">
+                                    <span>Name</span>
+                                    <span class="is-required">*</span>
+                                </div>
+                                <input class="user-input" type="text" name="username" id="userName" placeholder="Enter Nameame" />
+                                <i class="fa fa-user filter-user-input"></i>
+                            </div>
+                            <div class="input-wrapper">
+                                <div class="input-div">
+                                    <span>Email</span>
+                                    <span class="is-required">*</span>
+                                </div>
+                                <input class="user-input" type="text" name="useremail" id="userEmail" placeholder="Enter Email" />
+                                <i class="fas fa-envelope filter-user-input"></i>
+                            </div>
+                            <div class="input-wrapper">
+                                    <div class="input-div">
+                                        <span>Department</span>
+                                        <span class="is-required">*</span>
+                                    </div>
+                                    <input class="user-input" type="text" name="userdept" id="userDept" placeholder="Enter Department" />
+                                    <i class="fas fa-home filter-user-input"></i>
+                                </div>
+                            <div class="input-wrapper">
+                                <div class="input-div">
+                                    <span>Password</span>
+                                    <span class="required">*</span>
+                                </div>
+                                <input class="user-input" type="password" name="Password" id="password" placeholder="Enter Password" />
+                                <i class="fa fa-lock filter-user-input"></i>
+                            </div>
+                            <div class="input-wrapper">
+                                <div class="input-div">
+                                    <span>Confirm Password</span>
+                                    <span class="required">*</span>
+                                </div>
+                                <input class="user-input" type="password" name="cpassword" id="confirmPassword" placeholder=" Confirm Password" />
+                                <i class="fa fa-lock filter-user-input"></i>
+                            </div>
+                            <div class="form-btn">
+                                <button id="signupBtn" class="signin-btn" type="submit">Sign Up</button>
+                            </div>
+                            <div class="other-link">
+                                <a href="./login.html">Have an Account? Sign In</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="mainfooter" class="login-footer">
+            <p>CHEMCOS Loan &copy; 2018
+                <a href="#">Terms & Privacy</a>
+            </p>
+
+        </footer>
+        </div>
+</body>
+<script type="text/javascript" src="../js/default.js"></script>
+<script type="text/javascript" src="../js/UserAuthentication.js"></script>
+</html>
