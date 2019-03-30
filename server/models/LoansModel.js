@@ -17,8 +17,10 @@ class LoansModel extends DbConnect {
     const loanInterest = amountAndInterest - data.amount;
     const loanerUserId = req.verUserId;
     const name =  req.verUserName;
+    const email =req.verUserEmail;
     const department = req.verUserDept;
     const amount = data.amount;
+    const fileNo = req.verFileNo;
     const paymentDuration = data.paymentDuration;
     const guarantorOne = data.guarantorOne;
     const guarantorTwo = data.guarantorTwo;
@@ -37,9 +39,12 @@ class LoansModel extends DbConnect {
       loan_guarantor_four,
       loan_amount_to_pay,
       loan_pay_per_month,
-      loan_interest)
+      loan_interest,
+      user_file_no,
+      user_email
+    )
       VALUES 
-    ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
+    ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
     RETURNING *`;
     const params = [
       loanerUserId,
@@ -53,7 +58,9 @@ class LoansModel extends DbConnect {
       guarantorFour,
       amountAndInterest,
       paymentPerMonth,
-      loanInterest
+      loanInterest,
+      fileNo,
+      email,
     ];
     console.log(params);
     return this.pool.query(sql, params);

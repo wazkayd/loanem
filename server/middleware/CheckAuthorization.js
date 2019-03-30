@@ -29,6 +29,7 @@ class CheckAuthorization {
             req.verUserRole = decoded.userRole;
             req.verUserEmail = decoded.userEmail;
             req.verUserDept = decoded.userDept;
+            req.verFileNo = decoded.userFileNo;
             next();
           }
         });

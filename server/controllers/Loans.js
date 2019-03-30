@@ -1,5 +1,7 @@
 
 import LoansModel from '../models/LoansModel';
+import sendEmail from '../helpers/email/sendEmail';
+import emailTemplate from '../helpers/email/emailTemplate';
 
 const loansModel = new LoansModel();
 
@@ -18,6 +20,7 @@ class Loans {
     loansModel.placeLoan(req)
       .then((result) => {
         if (result.rowCount > 0) {
+          sendEmail(result.rows[0].user_email, emailTemplate.loanApply);
           return res.status(201)
             .json({
               status: 'success',
@@ -107,6 +110,12 @@ class Loans {
       req.body.loanStatus.toLowerCase())
       .then((result) => {
         if (result.rowCount > 0) {
+          if(result.rows[0].status ='accepted'){
+            sendEmail(result.rows[0].user_email, emailTemplate.loanAccepted);
+          }
+          if(result.rows[0].status ='cancelled'){
+            sendEmail(result.rows[0].user_email, emailTemplate.loanRejected);
+          }
           return res.status(200)
             .json({
               status: 'success',

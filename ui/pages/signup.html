@@ -66,11 +66,11 @@
 
                         <form onsubmit="return false;">
                             <div class="login-form-title">Sign Up</div>
-                            <div class="input-div">
+                            <div class="input-div-signup">
                                 <span id="signUpErrorHandler" class="error-hander"> </span>
                             </div>
                             <div class="input-wrapper">
-                                <div class="input-div">
+                                <div class="input-div-signup">
                                     <span>Name</span>
                                     <span class="is-required">*</span>
                                 </div>
@@ -78,7 +78,7 @@
                                 <i class="fa fa-user filter-user-input"></i>
                             </div>
                             <div class="input-wrapper">
-                                <div class="input-div">
+                                <div class="input-div-signup">
                                     <span>Email</span>
                                     <span class="is-required">*</span>
                                 </div>
@@ -86,15 +86,33 @@
                                 <i class="fas fa-envelope filter-user-input"></i>
                             </div>
                             <div class="input-wrapper">
-                                    <div class="input-div">
+                                <div class="input-div-signup">
+                                    <span>File No</span>
+                                    <span class="is-required">*</span>
+                                </div>
+                                <input class="user-input" type="text" name="userfileno" id="userFileNo" placeholder="Enter File Number" />
+                                <i class="fas fa-file filter-user-input"></i>
+                            </div>
+                            <div class="input-wrapper">
+                                    <div class="input-div-signup">
                                         <span>Department</span>
                                         <span class="is-required">*</span>
                                     </div>
-                                    <input class="user-input" type="text" name="userdept" id="userDept" placeholder="Enter Department" />
+                                    <select class="user-input" type="text" name="userdept" id="userDept" >
+                                        <option value=''>Choose your Department</option>
+                                        <option value='Admin'>Admin</option>
+                                        <option value='Computer Science'>Computer Science</option>
+                                        <option value='Footware'>Footware</option>
+                                        <option value='GNS'>GNS</option>
+                                        <option value='Leather'>Leather</option>
+                                        <option value='Polymer'>Polymer</option>
+                                        <option value='SLT'>SLT</option>  
+                                        <option value='Works'>Works</option>
+                                    </select>
                                     <i class="fas fa-home filter-user-input"></i>
                                 </div>
                             <div class="input-wrapper">
-                                <div class="input-div">
+                                <div class="input-div-signup">
                                     <span>Password</span>
                                     <span class="required">*</span>
                                 </div>
@@ -102,7 +120,7 @@
                                 <i class="fa fa-lock filter-user-input"></i>
                             </div>
                             <div class="input-wrapper">
-                                <div class="input-div">
+                                <div class="input-div-signup">
                                     <span>Confirm Password</span>
                                     <span class="required">*</span>
                                 </div>

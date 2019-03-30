@@ -1,6 +1,7 @@
 
 const emailReg = (/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
 const alphaOnly = (/^[a-zA-Z0-9]*$/);
+const numOnly = (/^[0-9]*$/);
 const signupBtn = document.getElementById('signupBtn');
 const loader = document.getElementById('loaderDiv');
 const loginBtn = document.getElementById('loginBtn');
@@ -21,7 +22,10 @@ class UserAuthentication {
     const email = document.getElementById('userEmail').value;
     const name = document.getElementById('userName').value;
     const password = document.getElementById('password').value;
-    const dept = document.getElementById('userDept').value;
+    const userDept = document.getElementById('userDept');
+    const dept = userDept.options[userDept.selectedIndex].value;
+    const fileNo = document.getElementById('userFileNo').value;
+  
     const repPassword = document.getElementById('confirmPassword').value;
     if (!name) {
       errorHandle.innerHTML = 'Name is Required';
@@ -29,6 +33,10 @@ class UserAuthentication {
     }
     if (!email) {
       errorHandle.innerHTML = 'Email is Required';
+      return false;
+    }
+    if (!fileNo) {
+      errorHandle.innerHTML = 'File Number is Required';
       return false;
     }
     if (!password) {
@@ -47,12 +55,12 @@ class UserAuthentication {
       errorHandle.innerHTML = 'Password can only be six character and above';
       return false;
     }
-    if (dept.length < 4) {
-      errorHandle.innerHTML = 'Department name should be 4 character and above';
-      return false;
-    }
     if (!email.match(emailReg)) {
       errorHandle.innerHTML = 'Please Enter a valid Email';
+      return false;
+    }
+    if (!fileNo.match(numOnly)) {
+      errorHandle.innerHTML = 'File number can only be numbers';
       return false;
     }
     if (!password.match(alphaOnly)) {
@@ -63,10 +71,6 @@ class UserAuthentication {
       errorHandle.innerHTML = 'name can only be alphabets and numbers';
       return false;
     }
-    if (!dept.match(alphabetOnly)) {
-      errorHandle.innerHTML = 'Department can only be alphabets';
-      return false;
-    }
 
     if (name.length >= 20) {
       errorHandle.innerHTML = 'name should be less than 20 char';
@@ -74,10 +78,6 @@ class UserAuthentication {
     }
     if (email.length > 40) {
       errorHandle.innerHTML = 'Email should be less than 30 char';
-      return false;
-    }
-    if (dept.length >= 20) {
-      errorHandle.innerHTML = 'Dept should be less than 20 char';
       return false;
     }
     if (password.length > 40) {
@@ -93,7 +93,8 @@ class UserAuthentication {
       userName: name,
       userEmail: email,
       userPassword: password,
-      userDept: dept
+      userDept: dept,
+      fileNo: fileNo
     };
     loader.style.display = 'flex';
     this.authPost(uDrl, payload)

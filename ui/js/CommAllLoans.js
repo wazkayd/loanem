@@ -98,7 +98,7 @@ class PresAllLoans extends Pagination {
                                     <div class="order-details-wrapper">
                                         <h1>Loan Details</h1>
                                         <div class="order-details">
-                                            <div><b>Loan Id:</b>${element.loan_id}</div>
+                                            <div><b>File No:</b>${element.user_file_no}</div>
                                             <div><b>Name:</b>${element.user_name}</div>
                                         </div>
                                         <div class="order-details">
