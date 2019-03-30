@@ -14,9 +14,9 @@ class AuthModel extends DbConnect {
     const salt = bcrypt.genSaltSync(10);
     const hashPassword = bcrypt.hashSync(data.userPassword, salt);
     const sql = `INSERT INTO 
-        users(user_email, user_password, user_name, user_dept) 
-        VALUES ($1, $2, $3, $4) RETURNING *`;
-    const params = [data.userEmail, hashPassword, data.userName, data.userDept];
+        users(user_email, user_password, user_name, user_dept, user_file_no)
+        VALUES ($1, $2, $3, $4, $5) RETURNING *`;
+    const params = [data.userEmail, hashPassword, data.userName, data.userDept, data.fileNo];
     return this.pool.query(sql, params);
   }
 
@@ -27,6 +27,7 @@ class AuthModel extends DbConnect {
      */
   userSignIn(data) {
     const inputEmail = data.userEmail;
+    console.log(data)
     const emailSql = 'select * from users where user_email = $1';
     const param = [inputEmail];
     return this.pool.query(emailSql, param);

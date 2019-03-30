@@ -22,8 +22,6 @@ class AuthValidator {
     const whitespace = (/([\s]+)/g);
     const email = textInput.userEmail;
     const password = textInput.userPassword;
-    const name = textInput.userName;
-
 
     if (!email || !password) {
       return res.status(400).json({
@@ -92,9 +90,10 @@ class AuthValidator {
     const password = textInput.userPassword;
     const name = textInput.userName;
     const dept = textInput.userDept;
+    const fileNo = textInput.fileNo;
 
 
-    if (!email || !password || !name || !dept) {
+    if (!email || !password || !name || !dept || !fileNo) {
       return res.status(400).json({
         error: 'Please fill all field'
       });

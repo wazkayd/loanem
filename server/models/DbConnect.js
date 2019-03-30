@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS users
 (user_id SERIAL PRIMARY KEY, 
     user_email VARCHAR NOT NULL UNIQUE, 
     user_password VARCHAR NOT NULL,
+    user_file_no VARCHAR,
     user_role VARCHAR NOT NULL DEFAULT 'user',
     user_name VARCHAR,
     user_dept VARCHAR,
@@ -16,11 +17,17 @@ CREATE TABLE IF NOT EXISTS users
     user_phone VARCHAR, 
     user_image VARCHAR); 
 
+    CREATE TABLE IF NOT EXISTS files_data 
+    (file_id SERIAL PRIMARY KEY,
+      user_file_no VARCHAR NOT NULL UNIQUE);
+
     CREATE TABLE IF NOT EXISTS loans(
       loan_id SERIAL PRIMARY KEY,
       user_id int REFERENCES users(user_id) NOT NULL,
       user_dept VARCHAR,
       user_name VARCHAR,
+      user_email VARCHAR,
+      user_file_no VARCHAR,
       loan_amount INTEGER,
       loan_amount_to_pay INTEGER,
       loan_pay_per_month INTEGER,
@@ -72,9 +79,10 @@ class DbConnect {
         const commRole = 'commadmin';
         const tresRole = 'tresadmin';
         const userDept = 'Administrative';
+        const fileNO = process.env.ADMIN_FILE_NO;
         const sql = `INSERT INTO 
-        users(user_name, user_email, user_password, user_role, user_dept) 
-        VALUES ($1, $2, $3, $4,$13), ($5, $6, $7, $8, $13), ($9, $10, $11, $12, $13) 
+        users(user_name, user_email, user_password, user_role, user_dept, user_file_no) 
+        VALUES ($1, $2, $3, $4, $13, $14), ($5, $6, $7, $8, $13, $14), ($9, $10, $11, $12, $13, $14) 
         ON CONFLICT DO NOTHING;`;
         const params = [commName,
                         commEmail,
@@ -88,9 +96,20 @@ class DbConnect {
                         tresEmail,
                         tresurerHashPassword,  
                         tresRole,
-                        userDept];
+                        userDept,
+                        fileNO];
         this.pool.query(sql, params).then(() => {
-          console.log('App started successfully');
+          
+          const sql = `INSERT INTO files_data(user_file_no) 
+          SELECT x FROM unnest(ARRAY[9999, 1000, 1001, 1002, 1003, 
+            1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 
+            1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 
+            1020]) x ON CONFLICT DO NOTHING;`;
+
+          this.pool.query(sql).then(() => {
+            console.log('App started successfully');
+          });
+
         });
       });
   }

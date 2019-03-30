@@ -1,6 +1,8 @@
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 import AuthModel from '../models/AuthModel';
+import sendEmail from '../helpers/email/sendEmail';
+import emailTemplate from '../helpers/email/emailTemplate';
 
 const authModel = new AuthModel();
 
@@ -23,8 +25,10 @@ class UserAuth {
           userName: result.rows[0].user_name,
           userRole: result.rows[0].user_role,
           userEmail: result.rows[0].user_email,
-          userDept: result.rows[0].user_dept
+          userDept: result.rows[0].user_dept,
+          userFileNo: result.rows[0].user_file_no
         }, process.env.JWT_KEY);
+        sendEmail(result.rows[0].user_email, emailTemplate.welcome);
         return res.status(201)
           .json({
             status: 'success',
@@ -60,7 +64,8 @@ class UserAuth {
             userName: result.rows[0].user_name,
             userRole: result.rows[0].user_role,
             userEmail: result.rows[0].user_email,
-            userDept: result.rows[0].user_dept
+            userDept: result.rows[0].user_dept,
+            userFileNo: result.rows[0].file_no,
           }, process.env.JWT_KEY);
           return res.status(200)
             .json({

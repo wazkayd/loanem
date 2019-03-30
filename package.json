@@ -5,11 +5,12 @@
   "main": "app.js",
   "scripts": {
     "start": "babel-node app",
-    "start:dev": "nodemon --exec \"babel-node app\""
+    "dev": "nodemon --exec \"babel-node app\""
   },
   "author": "Wasiu Hassan",
   "license": "MIT",
   "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
