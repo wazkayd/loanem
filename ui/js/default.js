@@ -1,5 +1,5 @@
-// const hostUrl = 'https://loanem.herokuapp.com/api/v1';
-const hostUrl = 'http://localhost:8000/api/v1';
+const hostUrl = 'https://loanem.herokuapp.com/api/v1';
+//const hostUrl = 'http://localhost:8000/api/v1';
 
 const scrollButton = document.getElementById('arrowP');
 const navbarSlider = document.getElementById('header-sm-sc');
