@@ -65,7 +65,7 @@ class UserAuth {
             userRole: result.rows[0].user_role,
             userEmail: result.rows[0].user_email,
             userDept: result.rows[0].user_dept,
-            userFileNo: result.rows[0].file_no,
+            userFileNo: result.rows[0].user_file_no,
           }, process.env.JWT_KEY);
           return res.status(200)
             .json({

@@ -24,6 +24,7 @@ class CheckAuthorization {
                 error: 'The token you provided is invalid'
               });
           } else {
+            console.log(decoded)
             req.verUserId = decoded.userId;
             req.verUserName = decoded.userName;
             req.verUserRole = decoded.userRole;
@@ -83,6 +84,7 @@ class CheckAuthorization {
             req.verUserRole = decoded.userRole;
             req.verUserEmail = decoded.userEmail;
             req.verUserDept = decoded.userDept;
+            req.verFileNo = decoded.userFileNo;
             next();
           }
         });

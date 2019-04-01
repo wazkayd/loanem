@@ -82,7 +82,7 @@ class DbConnect {
         const fileNO = process.env.ADMIN_FILE_NO;
         const sql = `INSERT INTO 
         users(user_name, user_email, user_password, user_role, user_dept, user_file_no) 
-        VALUES ($1, $2, $3, $4, $13, $14), ($5, $6, $7, $8, $13, $14), ($9, $10, $11, $12, $13, $14) 
+        VALUES ($1, $2, $3, $4, $13, $1), ($5, $6, $7, $8, $13, $5), ($9, $10, $11, $12, $13, $9) 
         ON CONFLICT DO NOTHING;`;
         const params = [commName,
                         commEmail,
@@ -96,8 +96,7 @@ class DbConnect {
                         tresEmail,
                         tresurerHashPassword,  
                         tresRole,
-                        userDept,
-                        fileNO];
+                        userDept];
         this.pool.query(sql, params).then(() => {
           
           const sql = `INSERT INTO files_data(user_file_no) 

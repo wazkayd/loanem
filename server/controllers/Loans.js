@@ -106,15 +106,21 @@ class Loans {
    * @returns {object} Returns the Loan information.
    */
   updateLoanStatus(req, res) {
+    console.log(req)
     loansModel.updateALoanStatus(req.params.id,
       req.body.loanStatus.toLowerCase())
       .then((result) => {
+        console.log('I get to the second part')
         if (result.rowCount > 0) {
-          if(result.rows[0].status ='accepted'){
+          console.log(result.rows[0])
+          if((result.rows[0].loan_status ==='accepted') && (req.verUserName === 'president')){
             sendEmail(result.rows[0].user_email, emailTemplate.loanAccepted);
           }
-          if(result.rows[0].status ='cancelled'){
+          if((result.rows[0].loan_status ==='cancelled') || (result.rows[0].loan_status ==='committee-cancelled')){
             sendEmail(result.rows[0].user_email, emailTemplate.loanRejected);
+          }
+          if(result.rows[0].loan_status ==='complete'){
+            sendEmail(result.rows[0].user_email, emailTemplate.completed);
           }
           return res.status(200)
             .json({

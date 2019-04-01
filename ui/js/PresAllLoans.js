@@ -261,12 +261,12 @@ class PresAllLoans extends Pagination {
         openModal[i].style.display = 'block';
         selectYes[i].onclick = () => {
           const payload = {
-            loanStatus: 'rejected'
+            loanStatus: 'cancelled'
           };
           this.updateOrderStatus(loanId, payload)
             .then((res) => {
               if (res.loan.loan_status === 'cancelled') {
-                rejectBtn[i].parentElement.innerHTML = 'Cancelled';
+                rejectBtn[i].parentElement.innerHTML = 'Rejected';
               }
               openModal[i].style.display = 'none';
             });

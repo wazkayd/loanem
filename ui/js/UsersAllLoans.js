@@ -50,7 +50,7 @@ class PresAllLoans extends Pagination {
             else if (element.loan_status === 'committee-accepted') {
                 cellRequest.innerHTML = 'processing';
             }
-            else if (element.loan_status === 'committee-rejected') {
+            else if (element.loan_status === 'committee-cancelled') {
                 cellRequest.innerHTML = 'Rejected';
             }
             else if (element.loan_status === 'accepted') {
